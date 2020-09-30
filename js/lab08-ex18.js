@@ -8,8 +8,16 @@ const stock = {
    name: "Apple Inc.",
    location: {
       address: "One Apple Park Way",
-      city: "Cupertino"
+      city: "Cupertino",
+      output() {
+         console.log(`${this.address} - ${this.city}`);
+      }
+   },
+   output: function () {
+      console.log(`${this.symbol} - ${this.name}`);
    }
 }
 
+stock.output();
 
+stock.location.output();
